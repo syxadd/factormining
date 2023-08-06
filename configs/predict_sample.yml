@@ -1,0 +1,26 @@
+# alphanet
+name: "FactorNet-4encoderNormalize"
+
+## dataset
+# dir_folder: "../stockdata/wukong"
+dir_folder: "../stockdata/sample"
+
+
+
+## network 
+netname: FactorNetLSTM_4encoder
+net_opt:
+  in_features: 32
+  out_features: 1
+  time_length: 30
+  # dropout: !!float 0.0 # currently not used
+
+## train setting
+batch_size: 2000
+total_epoch: 50
+lr: !!float 1e-4
+each_Tmax: 25
+
+## log setting
+exp_dir: "./experiments/"
+resume: ~

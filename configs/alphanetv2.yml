@@ -1,0 +1,23 @@
+# alphanet
+name: "Alphanetv2-b2000"
+
+## dataset
+dir_folder: "../stockdata/wukong"
+
+
+
+## network 
+netname: AlphanetV2
+net_opt:
+  in_features: 32
+  out_features: 1
+  time_length: 30
+
+## train setting
+batch_size: 2000
+total_epoch: 50
+lr: !!float 1e-4
+
+## log setting
+exp_dir: "./experiments/"
+resume: ~

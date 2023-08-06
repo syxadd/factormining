@@ -1,0 +1,32 @@
+# FactorNet with New built data
+name: "FactorNet-ID24-LargerLevelLearnable-sh50code-30-10"
+
+## dataset
+dir_folder: "../stockdata/sh50-20210721/"
+# dir_folder: "../stockdata/wukong-220821/"
+# dir_folder: "../stockdata/wukong-220817/"
+# dir_folder: "../stockdata/sample"
+time_length: 30
+pred_day: 10
+
+
+## network 
+netname: FactorNetID16_LargerLevelLearnable220911
+net_opt:
+  in_features: 40
+  out_features: 1
+  time_length: 30
+  # dropout: !!float 0.0 # currently not used
+
+## train setting
+batch_size: 2000
+total_epoch: 300
+lr: !!float 5e-4
+each_Tmax: 25
+restart_step: 25
+warmup_step: 5
+eta_min: !!float 5e-6
+
+## log setting
+exp_dir: "./experiments/"
+resume: ~
